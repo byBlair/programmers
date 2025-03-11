@@ -1,0 +1,5 @@
+-- 코드를 작성해주세요
+select  ROUND(SUM(IFNULL(LENGTH, 10)) / COUNT(*), 2) AS AVERAGE_LENGTH
+from FISH_INFO
+
+

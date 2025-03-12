@@ -1,3 +1,3 @@
 -- 코드를 입력하세요
-SELECT count(animal_type) as count
+select count(*) as count
 from ANIMAL_INS

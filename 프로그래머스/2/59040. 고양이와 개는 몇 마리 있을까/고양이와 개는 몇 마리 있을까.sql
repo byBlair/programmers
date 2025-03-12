@@ -1,9 +1,8 @@
--- 코드를 입력하세요
-SELECT ANIMAL_TYPE, COUNT(*) AS count
-FROM ANIMAL_INS
-WHERE ANIMAL_TYPE IN ('Cat', 'Dog')
-GROUP BY ANIMAL_TYPE
-ORDER BY CASE ANIMAL_TYPE
-    WHEN 'Cat' THEN 1
-    WHEN 'Dog' THEN 2
-END;
+select ANIMAL_TYPE, count(*) as count
+from ANIMAL_INS
+where ANIMAL_TYPE in ("Cat","Dog")
+group by ANIMAL_TYPE
+    order by case ANIMAL_TYPE
+    when 'Cat' then 1
+    when 'Dog' then 2
+end;

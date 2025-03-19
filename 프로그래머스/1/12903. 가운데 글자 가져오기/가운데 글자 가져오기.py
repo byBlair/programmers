@@ -1,7 +1,6 @@
 def solution(s):
-    length = len(s)
-    middle_index = length // 2
-    if length % 2 == 0:
-        return s[middle_index -1:middle_index + 1]
+    answer = len(s) // 2
+    if len(s) % 2 == 0:
+        return s[answer-1:answer+1]
     else :
-        return s[middle_index]
+        return s[answer]

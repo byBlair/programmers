@@ -1,5 +1,5 @@
 def solution(n):
-    answer = [int(digit) for digit in str(n)]
+    answer = [int(i) for i in str(n)]
     answer.sort(reverse=True)
-    answer2 = int(''.join(map(str,answer)))
-    return answer2
+    answer = int(''.join(map(str,answer)))
+    return answer

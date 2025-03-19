@@ -1,3 +1,10 @@
 def solution(n):
-    result = '수박' * (n // 2) + '수' * (n % 2)
+    result = ""
+    
+    for i in range(n):
+        if i % 2 == 0:
+            result += "수"
+        else:
+            result += "박"
+    
     return result

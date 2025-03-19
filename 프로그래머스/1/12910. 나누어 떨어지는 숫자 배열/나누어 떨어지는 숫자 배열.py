@@ -1,6 +1,3 @@
 def solution(arr, divisor):
-    answer = [x for x in arr if x % divisor == 0]
-    if not answer:
-        return [-1]
-    sorter = sorted(answer)
-    return sorter
+    result = sorted([i for i in arr if i % divisor == 0])
+    return result if result else [-1]

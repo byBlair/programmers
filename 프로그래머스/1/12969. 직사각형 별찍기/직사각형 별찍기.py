@@ -1,2 +1,4 @@
 a, b = map(int, input().strip().split(' '))
-print(('*'*a + '\n')*b)
+for _ in range(b):
+    print(a * '*')
+    

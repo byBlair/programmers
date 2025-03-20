@@ -1,3 +1,7 @@
 def solution(s):
-    answer = True
-    return answer
+    if len(s) == 4 or len(s) == 6:
+        if s.isdigit():
+            return True
+        else:
+            return False
+    return False

@@ -4,5 +4,5 @@ select count(*) as FISH_COUNT,
         FISH_TYPE
 from FISH_INFO
 group by FISH_TYPE
-having avg(case when LENGTH <= 10 then 10 else LENGTH end) >= 33
+having avg(ifnull(length,10)) >= 33
 order by FISH_TYPE;

@@ -1,3 +1,3 @@
 -- 코드를 작성해주세요
-select concat(max(LENGTH),'cm') as max_length
-from fish_info
+SELECT concat(MAX(LENGTH), 'cm') AS MAX_LENGTH 
+FROM FISH_INFO

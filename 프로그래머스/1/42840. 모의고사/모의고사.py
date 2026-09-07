@@ -1,22 +1,25 @@
 def solution(answers):
-    patterns = [
-        [1, 2, 3, 4, 5],
-        [2, 1, 2, 3, 2, 4, 2, 5],
-        [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    ]
-    # 수포자들의 점수를 저장할 리스트
+    answer = []
     
-   # 각 수포자의 패턴과 정답이 얼마나 일치하는지 확인 
-    scores =[0] * 3
-    for i,answer in enumerate(answers):
-        for j,pattern in enumerate(patterns):
-            if answer == pattern[i % len(pattern)]:
-                scores[j] += 1
-    # 가장 높은 점수 저장
-    max_score = max(scores)
+    person1 = [1, 2, 3, 4, 5]
+    person2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    person3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    score1 = 0
+    score2 = 0
+    score3 = 0
+    for i in range(len(answers)) :
+        if answers[i] == person1[i%len(person1)]:
+            score1 += 1
+        if answers[i] == person2[i%len(person2)]:
+            score2 += 1
+        if answers[i] == person3[i%len(person3)]:
+            score3 += 1
+    max_score = max(score1,score2,score3)
     
-    high=[]
-    for i,score in enumerate(scores):
-        if score == max_score:
-            high.append(i + 1)
-    return high
+    if score1 == max_score:
+        answer.append(1)
+    if score2 == max_score:
+        answer.append(2)
+    if score3 == max_score:
+        answer.append(3)
+    return answer
